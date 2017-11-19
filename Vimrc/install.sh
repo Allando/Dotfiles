@@ -1,7 +1,7 @@
 #!/bin/bash
 
-autoload='/home/$USER/.vim/autoload'
-bundle='/home/$USER/.vim/bundle'
+autoload='/home/theippo1000/.vim/autoload'
+bundle='/home/theippo1000/.vim/bundle'
 clone='git clone'
 
 createFolders()
