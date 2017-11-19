@@ -1,0 +1,33 @@
+" Hello!
+" This is the first .vimrc written by TheIppo1000
+" This file is written May 10th 2017.
+" I am currently watching the last episode of Kidou Senshi Gundam 00
+" I am truly moved!
+" Please enjoy!
+
+" First... let's turn on line nubers!
+set number
+
+" Testing git repo and syslinks! ..AND IT FUCKING WORKED!!!
+set autoindent		" Auto indenting
+set tabstop=4		" tab spacing
+syntax on			" Syntax ON!
+filetype plugin on
+
+" Turns of bell and visual bell
+set noerrorbells visualbell t_vb=
+if has('autocmd')
+	autocmd GUIEnter * set visualbell t_vb=
+endif
+
+" PATHOGEN
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
+" Nerdtree
+autocmd vimenter * NERDTree
+
+" Key Mapping
+map <C-n> :NERDTreeToggle<CR>
+
