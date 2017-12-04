@@ -23,6 +23,9 @@ InstallAllTheThings()
 
 	# Statusline
 	$clone https://github.com/vim-airline/vim-airline $bundle/vim-airline
+
+	# LaTeX
+	$clone https://github.com/ying17zi/vim-live-latex-preview.git $bundle/vim-live-latex-preview
 }
 
 main()

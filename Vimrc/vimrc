@@ -7,12 +7,16 @@
 
 " First... let's turn on line nubers!
 set number
-
-" Testing git repo and syslinks! ..AND IT FUCKING WORKED!!!
-set autoindent		" Auto indenting
-set tabstop=4		" tab spacing
-syntax on			" Syntax ON!
+set autoindent			" Auto indenting
+set tabstop=4			" tab spacing
+set softtabstop=4
+set mouse=a				" Turn on the mouse
+set bg=dark				" Setting background color
+set foldmethod=syntax	
+syntax on
 filetype plugin on
+
+
 
 " Turns of bell and visual bell
 set noerrorbells visualbell t_vb=
@@ -30,4 +34,4 @@ autocmd vimenter * NERDTree
 
 " Key Mapping
 map <C-n> :NERDTreeToggle<CR>
-
+map <-> :maplocalleader<CR>
