@@ -9,7 +9,7 @@
 set number
 set autoindent			" Auto indenting
 set mouse=a				" Turn on the mouse
-set bg=dark				" Setting background color
+" set bg=dark				" Setting background color
 set ruler
 set showmatch			" Show matching brackets when tet indicator iis over them
 set encoding=utf8
@@ -17,8 +17,8 @@ set encoding=utf8
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color and syntax
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-syntax enable
-colorscheme wombat256mod
+" syntax enable
+" colorscheme wombat256mod
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Files and file type
