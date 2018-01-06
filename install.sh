@@ -45,7 +45,6 @@ bashrc()
     fi   
 }
 
-
 termite()
 {
     if [$home/.config/termite]; then
@@ -83,3 +82,5 @@ vimrc()
         cp $currentPath/Vimrc/vimrc $home/.vimrc
     fi   
 }
+
+main
