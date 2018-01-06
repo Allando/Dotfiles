@@ -8,7 +8,7 @@ home=$("/home/$USER")
 main()
 {
     echo "Hello there!"
-    
+   
     choice=""
 
     read -p "Do you wish to create symbolic links instead of copying the files from the repository? [y/n]" yn
@@ -18,9 +18,13 @@ main()
         [Nn]* ) choice=cpy; break;;
         * ) echo "Please answer yes or no.";;
     esac
+
+    # calling all functions
     bashrc
     termite
     vimrc
+
+    echo "Done"
 }
 
 bashrc()
@@ -34,11 +38,11 @@ bashrc()
         [cpy]* ) choice=cpy; break;;
     esac
 
-    if [$1 == sym] then;
+     if [$1 == sym]; then
         ln -s $currentPath/bashrc $home/.bashrc
-    elif [$1 == cpy] then;
-        cp $currentPath/Bashrc/bashrc $home/bashrc
-    fi    
+    elif [$1 == cpy]; then
+        cp $currentPath/Bashrc/bashrc $home/.bashrc
+    fi   
 }
 
 
@@ -50,7 +54,16 @@ termite()
         mkdir .config/termite
     fi
 
-    ln -s $currentPath/Termite/config $home/.config/termite/config
+    case $1 in
+        [sym]* ) choice=sym; break;;
+        [cpy]* ) choice=cpy; break;;
+    esac
+
+     if [$1 == sym]; then
+        ln -s $currentPath/Termite/config $home/.config/termite/config
+    elif [$1 == cpy]; then
+        cp $currentPath/Termite/config $home/.config/termite/config
+    fi   
 }
 
 vimrc()
@@ -59,5 +72,14 @@ vimrc()
         rm $home/.vimrc
     fi
 
-    ln -s $currentPath/vimrc $home/.vimrc
+    case $1 in
+        [sym]* ) choice=sym; break;;
+        [cpy]* ) choice=cpy; break;;
+    esac
+
+     if [$1 == sym]; then
+        ln -s $currentPath/Vimrc/vimrc $home/.vimrc
+    elif [$1 == cpy]; then
+        cp $currentPath/Vimrc/vimrc $home/.vimrc
+    fi   
 }
