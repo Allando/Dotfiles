@@ -17,8 +17,8 @@ set encoding=utf8
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color and syntax
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-" syntax enable
-" colorscheme wombat256mod
+syntax enable
+"colorscheme wombat256mod
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Files and file type
