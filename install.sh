@@ -3,7 +3,7 @@
 set -e
 
 currentPath=$(pwd)
-home=$("/home/$USER")
+home="/home/$USER"
 
 main()
 {
