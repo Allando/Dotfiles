@@ -11,11 +11,11 @@ main()
    
     choice=""
 
-    read -p "Do you wish to create symbolic links instead of copying the files from the repository? [y/n]" yn
+    read -p "Do you wish to create symbolic links instead of copying the files from the repository? [y/n] " yn
 
-    case $yn in
-        [Yy]* ) choice=sym; break;;
-        [Nn]* ) choice=cpy; break;;
+    case "$yn" in
+        [Yy]* ) choice=sym;;
+        [Nn]* ) choice=cpy;;
         * ) echo "Please answer yes or no.";;
     esac
 
@@ -29,57 +29,67 @@ main()
 
 bashrc()
 {
-    if [$home/.bashrc]; then
+    if [ -d "$home/.bashrc"  ]; then
         rm $home/.bashrc
+        echo "rm bash"
     fi
     
     case $1 in
-        [sym]* ) choice=sym; break;;
-        [cpy]* ) choice=cpy; break;;
+        [sym]* ) choice="sym"; echo "bashrc is sym";;
+        [cpy]* ) choice="cpy"; echo "bashrc is cpy";;
     esac
 
-     if [$1 == sym]; then
+    if [ $choice == "sym" ]; then
         ln -s $currentPath/bashrc $home/.bashrc
-    elif [$1 == cpy]; then
+        echo "bashrc sym"
+    elif [ $choice == "cpy" ]; then
         cp $currentPath/Bashrc/bashrc $home/.bashrc
+        echo "bashrc cpy"
     fi   
 }
 
 termite()
 {
-    if [$home/.config/termite]; then
+    if [ -d "$home/.config/termite" ]; then
         rm $home/.config/termite/config
+        echo "Remove config"
     else
         mkdir .config/termite
+        echo "makin termite"
     fi
 
     case $1 in
-        [sym]* ) choice=sym; break;;
-        [cpy]* ) choice=cpy; break;;
+        [sym]* ) choice="sym"; echo "choice is sym";; 
+        [cpy]* ) choice="cpy"; echo "choice is cpy";; 
     esac
 
-     if [$1 == sym]; then
+    if [ $choice = "sym" ]; then
         ln -s $currentPath/Termite/config $home/.config/termite/config
-    elif [$1 == cpy]; then
+        echo "termite sym"
+    elif [ $choice = "cpy" ]; then
         cp $currentPath/Termite/config $home/.config/termite/config
+        echo "temite cpy"
     fi   
 }
 
 vimrc()
 {
-    if [$home/.vimrc]; then
+    if [ -d "$home/.vimrc" ]; then
         rm $home/.vimrc
+        echo "remove vimrc"
     fi
 
     case $1 in
-        [sym]* ) choice=sym; break;;
-        [cpy]* ) choice=cpy; break;;
+        [sym]* ) choice="sym"; echo "vimrc is sym";;
+        [cpy]* ) choice="cpy"; echo "vimrc is cpy";;
     esac
 
-     if [$1 == sym]; then
+    if [ $choice = "sym" ]; then
         ln -s $currentPath/Vimrc/vimrc $home/.vimrc
-    elif [$1 == cpy]; then
+        echo "vimrc sym" 
+    elif [ $choice = "cpy" ]; then
         cp $currentPath/Vimrc/vimrc $home/.vimrc
+        echo "vimrc cpy"
     fi   
 }
 
