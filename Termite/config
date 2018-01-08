@@ -1,7 +1,7 @@
 [options]
 #allow_bold = true
-#audible_bell = false
-#clickable_url = true
+audible_bell = false
+clickable_url = true
 #dynamic_title = true
 font = DejaVu Sans Mono Book 11
 #fullscreen = true
@@ -15,10 +15,10 @@ font = DejaVu Sans Mono Book 11
 scrollback_lines = 10000
 #search_wrap = true
 #urgent_on_bell = true
-#hyperlinks = false
+hyperlinks = true
 
 # $BROWSER is used by default if set, with xdg-open as a fallback
-#browser = firefox
+browser = firefox
 
 # "system", "on" or "off"
 #cursor_blink = system
@@ -42,45 +42,47 @@ cursor_shape = ibeam
 # If both of these are unset, cursor falls back to the foreground color,
 # and cursor_foreground falls back to the background color.
 #cursor = #dcdccc
-#cursor_foreground = #dcdccc
 
-foreground = #00ff00
+foreground = #ffffff
 #foreground_bold = #ffffff
 background = #000000
 
 # 20% background transparency (requires a compositor)
-background = rgba(25, 25, 25, 0.8)
+background = rgba(25, 25, 25, 0.9)
 
 # If unset, will reverse foreground and background
 highlight = #2f2f2f
 
 # Colors from color0 to color254 can be set
-color0: = #110900
-color1: = #fe4400
-color2: = #e77d29
-color3: = #e77d29
-color4: = #814618
-color5: = #fe4400
-color6: = #e77d29
-color7: = #e77d29
-color8: = #723d02
-color9: = #fe4400
-color10: = #fe4400
-color11: = #fe4400
-color12: = #814618
-color13: = #fe4400
-color14: = #fe4400
-color15: = #e77d29
+# Dark greys
+color0: = #1b1d1e
+color8: = #505354
 
+# Pinks... or magenta or somthn
+color1: = #f92672
+color9: = #ff5995
 
-[hints]
-#font = Monospace 12
-#foreground = #dcdccc
-#background = #3f3f3f
-#active_foreground = #e68080
-#active_background = #3f3f3f
-#padding = 2
-#border = #3f3f3f
-#border_width = 0.5
-#roundness = 2.0
+# Greens
+color2: = #82b414
+color10: = #b6e354
+
+# Yellows
+color3: = #fd9717
+color11: = #feed6c
+
+# Blues
+color4: = #4e82aa
+color12: = #0c76c2
+
+# Violets
+color5: = #8c54fe
+color13: = #9e6ffe
+
+# Light greys
+color6: = #465457
+color14: = #899ca1
+
+# some colors
+color7: = #ccccc6
+color15: = #f8f8f2
 
