@@ -29,20 +29,17 @@ main()
 
 bashrc()
 {
-    if [ -d "$home/.bashrc"  ]; then
-        rm $home/.bashrc
-        echo "rm bash"
-    fi
+    rm $home/.bashrc
     
     case $1 in
         [sym]* ) choice="sym"; echo "bashrc is sym";;
         [cpy]* ) choice="cpy"; echo "bashrc is cpy";;
     esac
 
-    if [ $choice == "sym" ]; then
-        ln -s $currentPath/bashrc $home/.bashrc
+    if [ $choice = "sym" ]; then
+        ln -s $currentPath/Bashrc/bashrc $home/.bashrc
         echo "bashrc sym"
-    elif [ $choice == "cpy" ]; then
+    elif [ $choice = "cpy" ]; then
         cp $currentPath/Bashrc/bashrc $home/.bashrc
         echo "bashrc cpy"
     fi   
@@ -51,10 +48,10 @@ bashrc()
 termite()
 {
     if [ -d "$home/.config/termite" ]; then
-        rm $home/.config/termite/config
+        rm -r $home/.config/termite/
         echo "Remove config"
     else
-        mkdir .config/termite
+        mkdir -p $home/.config/termite
         echo "makin termite"
     fi
 
@@ -69,12 +66,12 @@ termite()
     elif [ $choice = "cpy" ]; then
         cp $currentPath/Termite/config $home/.config/termite/config
         echo "temite cpy"
-    fi   
+    fi  
 }
 
 vimrc()
 {
-    if [ -d "$home/.vimrc" ]; then
+    if [ "$home/.vimrc" ]; then
         rm $home/.vimrc
         echo "remove vimrc"
     fi
