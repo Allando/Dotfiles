@@ -25,13 +25,13 @@ InstallAllTheThings()
     $clone https://github.com/vim-airline/vim-airline $bundle/vim-airline
 
     # Neocomplete
-    $clone https://github.com/Shougo/neocomplete.vim.git
+    $clone https://github.com/Shougo/neocomplete.vim.git $bundle/neocomplete
     
     # Syntastic
-    $clone https://github.com/vim-syntastic/syntastic.git
+    $clone https://github.com/vim-syntastic/syntastic.git $bundle/syntastic
     
     # IndentLine
-    $clone https://github.com/Yggdroot/indentLine.git
+    $clone https://github.com/Yggdroot/indentLine.git $bundle/indentLine
 
     # LaTeX
     $clone https://github.com/ying17zi/vim-live-latex-preview.git $bundle/vim-live-latex-preview
