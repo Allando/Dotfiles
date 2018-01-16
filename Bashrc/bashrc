@@ -169,3 +169,9 @@ alias mysql-off='sudo /opt/lampp/xampp stopmysql'
 ##### End XAMPP #####
 
 alias github='https://github.com/'
+
+
+##################### FUN #####################
+if [ -f /etc/bash.command-not-found ]; then
+    . /etc/bash.command-not-found
+fi
