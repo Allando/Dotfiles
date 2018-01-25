@@ -1,90 +1,102 @@
 [options]
-scroll_on_output = false
-scroll_on_keystroke = true
-audible_bell = false
-mouse_autohide = false
-allow_bold = true
-dynamic_title = true
-urgent_on_bell = false
-clickable_url = true
+#allow_bold = true
+#audible_bell = false
+#clickable_url = true
+#dynamic_title = true
 font = DejaVu Sans Mono Book 11
-scrollback_lines = 10000
-search_wrap = true
+#fullscreen = true
+#geometry = 640x480
 #icon_name = terminal
-
-# "system", "on" or "off"
-cursor_blink = system
-
-# "block", "underline" or "ibeam"
-cursor_shape = ibeam 
+#mouse_autohide = false
+#scroll_on_output = false
+#scroll_on_keystroke = true
+# Length of the scrollback buffer, 0 disabled the scrollback buffer
+# and setting it to a negative value means "infinite scrollback"
+scrollback_lines = 10000
+#search_wrap = true
+#urgent_on_bell = true
+#hyperlinks = false
 
 # $BROWSER is used by default if set, with xdg-open as a fallback
 browser = firefox
 
-# set size hints for the window
-# size_hints = true
+# "system", "on" or "off"
+#cursor_blink = system
+
+# "block", "underline" or "ibeam"
+cursor_shape = ibeam
 
 # Hide links that are no longer valid in url select overlay mode
-filter_unmatched_urls = true
+#filter_unmatched_urls = true
 
-# emit escape sequences for extra modified keys
+# Emit escape sequences for extra modified keys
 #modify_other_keys = false
 
+# set size hints for the window
+#size_hints = false
+
+# "off", "left" or "right"
+#scrollbar = off
+
 [colors]
+# If both of these are unset, cursor falls back to the foreground color,
+# and cursor_foreground falls back to the background color.
 cursor = #16a085
 cursor_foreground = #28292c
+
 foreground = #ff9100
-#foreground_bold = #d5f1f4
-background = #6e6e6e
+#foreground_bold = #ffffff
+background = #3f3f3f
 
 # 20% background transparency (requires a compositor)
-background = rgba(25,25,25,0.9)
+background = rgba(63, 63, 63, 0.9)
 
-# if unset, will reverse foreground and background
+# If unset, will reverse foreground and background
 highlight = #12174d
 
-# colors from color0 to color254 can be set
+# Colors from color0 to color254 can be set
 
-# black
-color0= #23423
-color8= #282928
+# black dark/light
+color0 = #3f3f3f
+color8 = #709080
 
-# red
-color1= #ba2922
-color9= #cc372c
+# red dark/light
+color1 = #ba2922
+color9 = #cc372c
 
-# Green
-color2= #7e807e
-color10= #8d8f8d
+# green dark/light
+color2 = 7e807e
+color10 = 8d8f8d
 
-# Yellow
-color3= #4c4f4d
-color11= #4e524f
+# yellow dark/light
+color3 = #4c4f4d
+color11 = #4e524f
 
-# Blue
+# blue dark/light
 color4 = #16a085
 color12 = #13bf90
 
-# Magenta
-color5 =  #43746a
+# magenta dark/light
+color5 = #43746a
 color13 = #487d72
 
-# Cyan
+# cyan dark/light
 color6 = #00cccc
 color14 = #00d1d1
 
-# White
-color7=  #e0e0e0
-color15= #e8e8e8
+# white dark/light
+color7 = #e0e0e0
+color15 = #e8e8e8
 
 [hints]
-#font = scientifica Regular 11
-#foreground:    #ac8e8e
-#background:    #101011
+#font = Monospace 12
+#foreground = #dcdccc
+#background = #3f3f3f
 #active_foreground = #e68080
 #active_background = #3f3f3f
-#padding = 4
+#padding = 2
 #border = #3f3f3f
 #border_width = 0.5
 #roundness = 2.0
 
+# vim: ft=dosini cms=#%s
