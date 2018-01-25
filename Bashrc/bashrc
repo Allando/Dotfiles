@@ -151,7 +151,7 @@ alias nightoff='sudo -u gdm dbus-launch --exit-with-session gsettings set org.gn
 
 
 
-alias fuckEverything='./fuckThis.sh && exit'
+alias wallpap='feh --no-fehbg --bg-scale Pictures/wallpapers/sergey-zabelin-hong-kong-street-patrol-1920.jpg'
 
 ##### XAMPP #####
 
