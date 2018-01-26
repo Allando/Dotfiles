@@ -46,10 +46,10 @@ cursor_foreground = #28292c
 
 foreground = #ff9100
 #foreground_bold = #ffffff
-background = #3f3f3f
+background = #000000
 
 # 20% background transparency (requires a compositor)
-background = rgba(63, 63, 63, 0.9)
+background = rgba(20, 20, 20, 0.9)
 
 # If unset, will reverse foreground and background
 highlight = #12174d
