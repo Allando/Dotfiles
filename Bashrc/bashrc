@@ -151,7 +151,7 @@ alias nightoff='sudo -u gdm dbus-launch --exit-with-session gsettings set org.gn
 
 
 
-alias wallpap='feh --no-fehbg --bg-scale Pictures/wallpapers/cyberpunk_doodle_by_monorirogue-d8rh71e.jpg'
+alias wallpap='feh --no-fehbg --bg-scale Pictures/wallpaper/thefuture7.jpg'
 
 ##### XAMPP #####
 
