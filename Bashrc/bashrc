@@ -149,10 +149,6 @@ alias clScan='sudo freshclam && sudo clamscan -r -i /'
 alias nighton='sudo -u gdm dbus-launch --exit-with-session gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true'
 alias nightoff='sudo -u gdm dbus-launch --exit-with-session gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled false'
 
-
-
-alias wallpap='feh --no-fehbg --bg-scale Pictures/wallpaper/thefuture7.jpg'
-
 ##### XAMPP #####
 
 # Path to apollo directory in htdocs.
