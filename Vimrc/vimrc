@@ -8,8 +8,8 @@
 " First... let's turn on line nubers!
 set number
 set autoindent			" Auto indenting
-set mouse=a				" Turn on the mouse
-" set bg=dark				" Setting background color
+set mouse=a			" Turn on the mouse
+" set bg=dark			" Setting background color
 set ruler
 set showmatch			" Show matching brackets when tet indicator iis over them
 set encoding=utf8
@@ -20,6 +20,11 @@ set encoding=utf8
 syntax enable
 "colorscheme wombat256mod
 
+"Airline Theme
+let g:airline_theme='wombat' 
+
+" LineNr highlight
+highlight LineNr ctermfg=lightgrey ctermbg=3a3a3a
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Files and file type
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -29,6 +34,15 @@ filetype indent plugin on
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Text and tabs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Key mapping
+map <S-w> :w!<CR>
+
+" Key remapping
+" inoremap <l> <up>
+" inoremap <k> <down>
+" inoremap <j> <left>
+" inoremap <æ> <right>
+
 " Use spaces instead of tabs
 set expandtab
 
@@ -47,7 +61,6 @@ set tw=500
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
-
 
 syntax on
 filetype plugin on
@@ -69,7 +82,6 @@ filetype plugin indent on
 " Key Mapping
 map <C-n> :NERDTreeToggle<CR>
 map <-> :maplocalleader<CR>
-map <S-w> :w!<CR>
 
 " Line indention
 let g:indentLine_setColors = 0

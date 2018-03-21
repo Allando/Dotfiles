@@ -56,9 +56,13 @@ highlight = #12174d
 
 # Colors from color0 to color254 can be set
 
-# black dark/light
-color0 = #3f3f3f
-color8 = #709080
+# grey dark/light
+# color0 = #3f3f3f
+# color8 = #709080
+
+# grey dark/light
+color0 = #401d3d
+color8 = #70366b
 
 # red dark/light
 color1 = #ba2922
