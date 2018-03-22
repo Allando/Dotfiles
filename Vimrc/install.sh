@@ -33,8 +33,8 @@ InstallAllTheThings()
     # IndentLine
     $clone https://github.com/Yggdroot/indentLine.git $bundle/indentLine
 
-    # LaTeX
-    $clone https://github.com/ying17zi/vim-live-latex-preview.git $bundle/vim-live-latex-preview
+    # airline
+    $clone https://github.com/vim-airline/vim-airline-themes $bundle/vim-airline-themes
 }
 
 main()
