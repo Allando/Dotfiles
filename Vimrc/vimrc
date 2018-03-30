@@ -3,15 +3,16 @@
 " This file is written May 10th 2017.
 " I am currently watching the last episode of Kidou Senshi Gundam 00
 " I am truly moved!
-" Please enjoy!
 
-" First... let's turn on line nubers!
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Basic set
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number
 set autoindent			" Auto indenting
 set mouse=a			" Turn on the mouse
 " set bg=dark			" Setting background color
 set ruler
-set showmatch			" Show matching brackets when tet indicator iis over them
+set showmatch			" Show matching brackets when the indicator is over them
 set encoding=utf8
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -36,12 +37,6 @@ filetype indent plugin on
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key mapping
 map <S-w> :w!<CR>
-
-" Key remapping
-" inoremap <l> <up>
-" inoremap <k> <down>
-" inoremap <j> <left>
-" inoremap <æ> <right>
 
 " Use spaces instead of tabs
 set expandtab
@@ -71,7 +66,31 @@ if has('autocmd')
 	autocmd GUIEnter * set visualbell t_vb=
 endif
 
-" PATHOGEN
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Behavior
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" ctrl+d open a shell.
+nmap <silent> <C-D> :shell<CR>
+
+" Reload files
+set autoread
+augroup checktime
+    au!
+    if !has("gui_running")
+        autocmd BufEnter        * silent! checktime
+        autocmd CursorHold      * silent! checktime
+        autocmd CursorHoldI     * silent! checktime
+
+        autocmd CursorMoved     * silent! checktime
+        autocmd CursorMovedI    * silent! checktime
+    endif
+augroup END
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Pathogen
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
@@ -88,6 +107,8 @@ let g:indentLine_setColors = 0
 let g:indentLine_color_term = 239
 let g:indentLine_char = '|'
 
+
+""Neocomplete
 "Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
@@ -158,3 +179,5 @@ endif
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+"" Neocomplete end
+
