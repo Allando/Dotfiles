@@ -26,6 +26,9 @@ let g:airline_theme='wombat'
 
 " LineNr highlight
 highlight LineNr ctermfg=lightgrey ctermbg=3a3a3a
+
+" Assembly highlight - nasm
+au BufRead,BufNewFile *.asm set filetype=nasm
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Files and file type
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
