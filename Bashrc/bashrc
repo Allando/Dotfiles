@@ -150,10 +150,6 @@ alias nighton='sudo -u gdm dbus-launch --exit-with-session gsettings set org.gno
 alias nightoff='sudo -u gdm dbus-launch --exit-with-session gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled false'
 
 ##### XAMPP #####
-
-# Path to apollo directory in htdocs.
-alias apopath='cd /opt/lampp/htdocs/apollobrand'
-
 ## Apache2 Server
 alias apa-on='sudo /opt/lampp/xampp startapache'
 alias apa-off='sudo /opt/lampp/xampp stopapache'
@@ -164,10 +160,21 @@ alias mysql-off='sudo /opt/lampp/xampp stopmysql'
 
 ##### End XAMPP #####
 
+##### NMAP #####
+alias nse='ls /usr/share/nmap/scripts | grep -i '
+
 alias github='https://github.com/'
+
+alias findmypi="sudo nmap -sP 192.168.*.0/24 | awk '/^Nmap/{ip=$NF}/B8:27:EB/{print ip}'"
 
 
 ##################### FUN #####################
-if [ -f /etc/bash.command-not-found ]; then
-    . /etc/bash.command-not-found
-fi
+#if [ -f /etc/bash.command-not-found ]; then
+#    . /etc/bash.command-not-founds
+#fi
+# export http_proxy='127.0.0.1:8888'
+# export https_proxy='127.0.0.1:8888'
+# export ftp_proxy=''
+# export socks_proxy=''
+
+[[ -s /home/theippo1000/.autojump/etc/profile.d/autojump.sh ]] && source /home/theippo1000/.autojump/etc/profile.d/autojump.sh

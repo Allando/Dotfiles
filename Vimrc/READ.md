@@ -1,3 +1,0 @@
-# Vimrc
-# Vimrc
-# Vimrc
